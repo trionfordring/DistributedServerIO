@@ -1,6 +1,6 @@
 package icu.fordring.distributedServerIO.utils;
 
-import icu.fordring.distributedServerIO.fileDisribution.FileBlockReader;
+import icu.fordring.distributedServerIO.fileDisribution.FileBlockSenter;
 import icu.fordring.distributedServerIO.fileDisribution.FileSpliter;
 import icu.fordring.distributedServerIO.fileDisribution.FileInfo;
 
@@ -17,7 +17,7 @@ public class TestUtils {
         FileInfo fi = FileInfo.Builder.open(dataPath);
         System.out.println("size:"+fi.getSize());
         CyclicBarrier cb = new CyclicBarrier(threadNum+1);
-        FileBlockReader fs[] = FileSpliter.splitFile(fi,fouts,cb);
+        FileBlockSenter fs[] = FileSpliter.splitFile(fi,fouts,cb);
         for(int i=0;i<fs.length;i++){
             Thread t = new Thread(fs[i]);
             t.start();

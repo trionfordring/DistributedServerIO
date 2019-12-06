@@ -11,7 +11,7 @@ import java.util.concurrent.CyclicBarrier;
  * 读取一个文件的一部分，读取的范围是[start,end)。
  * 输出后的结果为(byte)：
  */
-public class FileBlockReader implements Runnable {
+public class FileBlockSenter implements Runnable {
     private long start;
     private long end;
     private long totalSize;
@@ -23,7 +23,7 @@ public class FileBlockReader implements Runnable {
     private boolean barrierOn=false;
     private int index;
 
-    public FileBlockReader(long start, long totalSize, FileInfo file, OutputStream out,int index) {
+    public FileBlockSenter(long start, long totalSize, FileInfo file, OutputStream out, int index) {
         this.start = start;
         this.totalSize=totalSize;
         this.end = start+totalSize;

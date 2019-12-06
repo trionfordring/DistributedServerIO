@@ -1,12 +1,12 @@
 package icu.fordring.distributedServerIO.fileDisribution;
 
-import java.io.IOException;
-import java.nio.MappedByteBuffer;
-import java.nio.channels.FileChannel;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
+        import java.io.IOException;
+        import java.nio.MappedByteBuffer;
+        import java.nio.channels.FileChannel;
+        import java.nio.file.Files;
+        import java.nio.file.Path;
+        import java.nio.file.Paths;
+        import java.util.ArrayList;
 
 /**
  * 封装一个file的信息
